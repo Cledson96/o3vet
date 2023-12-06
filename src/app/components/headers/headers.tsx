@@ -99,7 +99,7 @@ export default function Headers() {
               >
                 <Link
                   className="flex items-center font-normal"
-                  href={item.link}
+                  href={`/${item.link}`}
                 >
                   {item.name}
                 </Link>
