@@ -3,8 +3,8 @@ import imgQuemSomos from "public/img/quemSomos/quemSomos.png";
 export default function QuemSomos() {
   return (
     <section className="container bg-white px-10 pt-15 mx-auto ">
-      <div className="lg:flex h-full">
-        <div className="lg:w-1/2 flex justify-center">
+      <div className="flex h-full flex-col sm:flex-row">
+        <div className="sm:w-1/2 flex justify-center">
           <Image
             src={imgQuemSomos}
             alt="QuemSomos"
@@ -12,7 +12,7 @@ export default function QuemSomos() {
           />
         </div>
 
-        <div className="lg:w-1/2 sm:text-right	text-center flex flex-col justify-center">
+        <div className="sm:w-1/2 sm:text-right	text-center flex flex-col justify-center">
           <h1 className="text-padrao text-5xl font-bold mb-8 tracking-titulo font-georama font-georama-semibold">
             Quem somos?
           </h1>

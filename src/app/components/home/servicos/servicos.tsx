@@ -5,15 +5,15 @@ import camera from "public/img/servicos/camera.png";
 import idea from "public/img/servicos/luz.png";
 import o3 from "public/img/servicos/o3.png";
 
-export default function QuemSomos() {
+export default function Servicos() {
   return (
-    <section className="container bg-white px-10 pt-15 mx-auto ">
-      <div className="lg:flex h-full">
-        <div className="lg:w-1/2 sm:text-left	text-center flex flex-col justify-center">
-          <h1 className="text-padrao text-5xl font-bold mb-8 tracking-titulo font-georama font-georama-semibold">
+    <section className="container bg-white px-10 pt-15 mx-auto mt-14">
+      <div className="flex h-full flex-col-reverse sm:flex-row">
+        <div className="sm:w-1/2  flex flex-col justify-center">
+          <h1 className="text-padrao text-5xl font-bold mb-8 tracking-titulo font-georama font-georama-semibold sm:text-left text-center">
             Serviços
           </h1>
-          <p className="leading-7 text-textSomos text-justify sm:text-left">
+          <p className="leading-7 text-textSomos text-justify text-center sm:text-left">
             Hoje temos uma estrutura completa de serviços para atender os
             diversos cenários que envolvem a necessidade de nossas
             especialidades.
@@ -38,8 +38,12 @@ export default function QuemSomos() {
             </li>
           </ul>
         </div>
-        <div className="lg:w-1/2 flex justify-center">
-          <Image src={imgServicos} alt="Servicos" className="max-h-96 w-auto" />
+        <div className="sm:w-1/2 flex justify-center items-center">
+          <Image
+            src={imgServicos}
+            alt="Servicos"
+            className="max-h-96 w-auto min-h-350"
+          />
         </div>
       </div>
     </section>

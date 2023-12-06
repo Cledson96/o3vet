@@ -21,6 +21,9 @@ const config: Config = {
       letterSpacing: {
         titulo: "-5px",
       },
+      minHeight: {
+        "350": "350px",
+      },
     },
   },
   plugins: [],

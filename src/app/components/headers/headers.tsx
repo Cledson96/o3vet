@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { useSession } from "next-auth/react";
+
 import logo from "public/img/headers/logo.png";
 import lupa from "public/img/headers/lupa.png";
 import carrinho from "public/img/headers/carrinho.png";
@@ -14,6 +16,8 @@ interface MenuItem {
 }
 
 export default function Headers() {
+  const { data } = useSession();
+
   const itensMenu: MenuItem[] = [
     { name: "Quem somos", status: "on", link: "#quemSomos" },
     { name: "Serviços", status: "on", link: "#quemSomos" },
@@ -22,6 +26,26 @@ export default function Headers() {
     { name: "Promoções", status: "on", link: "#quemSomos" },
     { name: "Contato", status: "on", link: "#quemSomos" },
   ];
+
+  function formatName(name: string): string {
+    const words = name.split(" ");
+
+    if (words.length > 0) {
+      let formattedName =
+        words[0].charAt(0).toUpperCase() + words[0].slice(1).toLowerCase();
+
+      if (words.length > 1 && formattedName.length + words[1].length <= 15) {
+        formattedName +=
+          " " +
+          words[1].charAt(0).toUpperCase() +
+          words[1].slice(1).toLowerCase();
+      }
+
+      return formattedName;
+    }
+
+    return "";
+  }
 
   return (
     <header className="container px-20 py-3 text-textHeaders w-screen min-w-full">
@@ -44,7 +68,13 @@ export default function Headers() {
         </div>
         <div className="h-full w-6/12  flex justify-end">
           <h1 className="text-padrao my-auto text-2xl font-bold cursor-pointer">
-            Login
+            {data && data.user ? (
+              <h1>{formatName(data.user.name ? data.user.name : "")}</h1>
+            ) : (
+              <Link href="login">
+                <h1>Login</h1>
+              </Link>
+            )}
           </h1>
           <div className="h-10 my-auto ml-8 flex ">
             <Image
