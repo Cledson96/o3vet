@@ -10,12 +10,12 @@ import carrinho from "public/img/headers/carrinho.png";
 interface MenuItem {
   name: string;
   status: "on" | "off";
-  link:string;
+  link: string;
 }
 
 export default function Headers() {
   const itensMenu: MenuItem[] = [
-    { name: "Quem somos", status: "on", link: "#quemSomos"},
+    { name: "Quem somos", status: "on", link: "#quemSomos" },
     { name: "Serviços", status: "on", link: "#quemSomos" },
     { name: "Cursos", status: "on", link: "#quemSomos" },
     { name: "Produtos", status: "on", link: "#quemSomos" },
@@ -52,17 +52,32 @@ export default function Headers() {
               alt="carrinho"
               className="w-auto h-3/5 my-auto cursor-pointer"
             />
-            <div className="rounded-full bg-padrao h-4 w-4 flex items-center justify-center text-sm text-white">0</div>
+            <div className="rounded-full bg-padrao h-4 w-4 flex items-center justify-center text-sm text-white">
+              0
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="row mt-7 h-12">
-      <ul className="flex flex-row justify-between h-full">
+      <div className="row mt-7 h-12 hidden sm:flex w-full">
+        <ul className="flex flex-row justify-between h-full w-full">
           {itensMenu.map((item, index) => {
-            return <li className="hover:bg-padrao  hover:text-white flex p-5 transition duration-300 ease-in-out" key={index}><Link className="flex items-center font-normal" href={item.link}>{item.name}</Link></li>;
+            return (
+              <li
+                className="hover:bg-padrao  hover:text-white flex p-5 transition duration-300 ease-in-out"
+                key={index}
+              >
+                <Link
+                  className="flex items-center font-normal"
+                  href={item.link}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
           })}
-        </ul> </div>
+        </ul>{" "}
+      </div>
     </header>
   );
 }

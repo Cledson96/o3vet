@@ -25,7 +25,7 @@ export default function Feature() {
     },
   ];
   return (
-    <div className=" row bg-padrao py-3 flex justify-center gap-28">
+    <div className="gap-4 row bg-padrao py-3 flex justify-center sm:gap-8 w-full h-16 md:h-20 lg:gap-28 ">
       {itens.map((item, index) => {
         return (
           <Itens

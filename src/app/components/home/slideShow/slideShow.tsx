@@ -25,7 +25,9 @@ export default function SlideShow() {
       <div className="relative">
         <Zoom {...zoomOutProperties}>
           {imagens.map((each, index) => {
-            return <Image key={index} src={each} alt="o3vet" />;
+            return (
+              <Image key={index} src={each} alt="o3vet" className="w-full" />
+            );
           })}
         </Zoom>
       </div>
