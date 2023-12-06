@@ -7,7 +7,10 @@ import o3 from "public/img/servicos/o3.png";
 
 export default function Servicos() {
   return (
-    <section className="container bg-white px-10 pt-15 mx-auto mt-14">
+    <section
+      className="container bg-white px-10 pt-15 mx-auto mt-14"
+      id="servicos"
+    >
       <div className="flex h-full flex-col-reverse sm:flex-row">
         <div className="sm:w-1/2  flex flex-col justify-center">
           <h1 className="text-padrao text-5xl font-bold mb-8 tracking-titulo font-georama font-georama-semibold sm:text-left text-center">

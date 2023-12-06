@@ -2,7 +2,7 @@ import Image from "next/image";
 import imgQuemSomos from "public/img/quemSomos/quemSomos.png";
 export default function QuemSomos() {
   return (
-    <section className="container bg-white px-10 pt-15 mx-auto ">
+    <section className="container bg-white px-10 pt-15 mx-auto " id="quemSomos">
       <div className="flex h-full flex-col sm:flex-row">
         <div className="sm:w-1/2 flex justify-center">
           <Image

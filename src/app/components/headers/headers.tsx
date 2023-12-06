@@ -20,7 +20,7 @@ export default function Headers() {
 
   const itensMenu: MenuItem[] = [
     { name: "Quem somos", status: "on", link: "#quemSomos" },
-    { name: "Serviços", status: "on", link: "#quemSomos" },
+    { name: "Serviços", status: "on", link: "#servicos" },
     { name: "Cursos", status: "on", link: "#quemSomos" },
     { name: "Produtos", status: "on", link: "#quemSomos" },
     { name: "Promoções", status: "on", link: "#quemSomos" },
